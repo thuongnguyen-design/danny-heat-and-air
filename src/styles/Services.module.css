@@ -19,7 +19,7 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(11,20,55,0.95) 0%, rgba(26,43,94,0.85) 100%);
+  background: linear-gradient(135deg, rgba(43,127,181,0.80) 0%, rgba(26,39,68,0.95) 50%, rgba(198,40,40,0.65) 100%);
 }
 .heroContent {
   position: relative;
@@ -34,7 +34,7 @@
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-weight: 700;
-  color: var(--brand-orange);
+  color: var(--brand-blue);
   font-family: var(--font-display);
   font-size: 0.82rem;
   margin-bottom: 12px;
@@ -43,7 +43,7 @@
   display: inline-block;
   width: 32px;
   height: 3px;
-  background: var(--brand-orange);
+  background: var(--brand-blue);
   border-radius: 2px;
 }
 .heroH1 {
@@ -72,15 +72,15 @@
 /* ── All Services Grid ───────────────────────────────────── */
 .allServices {
   padding: 100px 0;
-  background: var(--brand-cream);
+  background: var(--brand-gray-bg);
   position: relative;
 }
 .allServices::before {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.3;
-  background-image: radial-gradient(circle, #d4cfc9 1px, transparent 1px);
+  opacity: 0.25;
+  background-image: radial-gradient(circle, #d0d5dd 1px, transparent 1px);
   background-size: 24px 24px;
   pointer-events: none;
 }
@@ -109,7 +109,7 @@
 .serviceCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-  border-left-color: var(--brand-orange);
+  border-left-color: var(--brand-blue);
 }
 
 .svcIcon {
@@ -117,16 +117,16 @@
   height: 48px;
   min-width: 48px;
   border-radius: 10px;
-  background: rgba(245,98,15,0.08);
+  background: var(--brand-blue-lt);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: var(--brand-orange-dk);
+  color: var(--brand-blue);
   transition: all 0.3s ease;
 }
 .serviceCard:hover .svcIcon {
-  background: var(--brand-orange);
+  background: var(--brand-blue);
   color: #fff;
 }
 
@@ -156,7 +156,7 @@
   font-family: var(--font-display);
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--brand-orange-dk);
+  color: var(--brand-blue-dk);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -192,12 +192,12 @@
   border-radius: 16px;
   padding: 32px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  border: 1px solid rgba(11,20,55,0.04);
+  border: 1px solid rgba(26,39,68,0.04);
   transition: all 0.3s ease;
 }
 .catCard:hover {
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-  border-color: rgba(255,107,0,0.15);
+  border-color: rgba(59,159,217,0.15);
 }
 
 .catHeader {
@@ -206,7 +206,7 @@
   align-items: flex-start;
   margin-bottom: 24px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(11,20,55,0.06);
+  border-bottom: 1px solid rgba(26,39,68,0.06);
 }
 
 .catIcon {
@@ -214,7 +214,7 @@
   height: 52px;
   min-width: 52px;
   border-radius: 12px;
-  background: var(--brand-orange);
+  background: var(--brand-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,7 +251,7 @@
   font-size: 0.92rem;
   font-weight: 600;
   color: var(--brand-navy);
-  border-bottom: 1px solid rgba(11,20,55,0.05);
+  border-bottom: 1px solid rgba(26,39,68,0.05);
   transition: all 0.2s ease;
 }
 .catLink:last-child {
@@ -259,11 +259,11 @@
 }
 .catLink i {
   font-size: 0.6rem;
-  color: var(--brand-orange);
+  color: var(--brand-blue);
   transition: transform 0.2s ease;
 }
 .catLink:hover {
-  color: var(--brand-orange);
+  color: var(--brand-blue);
   padding-left: 6px;
 }
 .catLink:hover i {

@@ -80,11 +80,11 @@ export default function Header() {
       <div className={styles.topBar}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
           <span className={styles.topBarText}>
-            Serving Stockton &amp; Surrounding Areas — Licensed, Bonded &amp; Insured
+            <i className="fa-solid fa-location-dot" style={{ color: 'var(--brand-blue)' }}></i> Serving Stockton &amp; Surrounding Areas — Licensed, Bonded &amp; Insured
           </span>
           <a href={`tel:${config.phoneMain.replace(/\D/g, "")}`} className={styles.topBarCall}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call Now
+            <i className="fa-solid fa-phone"></i>
+            Get Help Now
           </a>
         </div>
       </div>
@@ -94,14 +94,14 @@ export default function Header() {
           <Link href="/" className={styles.logo}>
             <span className={styles.logoIcon}>
               <svg viewBox="0 0 40 40" width="36" height="36" fill="none">
-                <circle cx="20" cy="20" r="18" stroke="#FF6B00" strokeWidth="2.5" fill="none" strokeDasharray="6 3"/>
-                <path d="M20 5C27 12 32 15 32 20C32 27 27 32 20 32C13 32 8 27 8 20C8 15 13 12 20 5Z" fill="#FF6B00" opacity="0.8"/>
-                <path d="M20 11C24 15 27 18 27 20C27 24 24 27 20 27C16 27 13 24 13 20C13 18 16 15 20 11Z" fill="#FF6B00"/>
+                <circle cx="20" cy="20" r="18" stroke="#3B9FD9" strokeWidth="2.5" fill="none" strokeDasharray="6 3"/>
+                <path d="M20 5C27 12 32 15 32 20C32 27 27 32 20 32C13 32 8 27 8 20C8 15 13 12 20 5Z" fill="#3B9FD9" opacity="0.8"/>
+                <path d="M20 11C24 15 27 18 27 20C27 24 24 27 20 27C16 27 13 24 13 20C13 18 16 15 20 11Z" fill="#3B9FD9"/>
                 <circle cx="20" cy="20" r="4" fill="white"/>
               </svg>
             </span>
             <span className={styles.logoText}>
-              <span style={{ color: 'var(--brand-orange)' }}>DANNY</span> Heat &amp; Air
+              <span style={{ color: 'var(--brand-blue)' }}>DANNY</span> Heat &amp; Air
             </span>
           </Link>
 
@@ -162,6 +162,14 @@ export default function Header() {
           <div className={styles.ctas}>
             <Link href="/contact-us" className="btn btn-primary">Book Service Now</Link>
           </div>
+
+          <a
+            href={`tel:${config.phoneMain.replace(/\D/g, "")}`}
+            className={styles.mobilePhoneBtn}
+            aria-label="Call for emergency repair"
+          >
+            <i className="fa-solid fa-phone"></i>
+          </a>
 
           <button className={styles.hamburger} onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
             <span /><span /><span />

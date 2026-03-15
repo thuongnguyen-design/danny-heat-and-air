@@ -64,11 +64,11 @@ export default function HomePage() {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <div className={styles.heroLeft}>
-            <span className="section-label">
-              Repairing Services
+            <span className={styles.heroLabel}>
+              <span className={styles.heroLabelBar}></span> Year-Round Comfort
             </span>
             <h1 className={styles.heroH1}>
-              Keeping You Cool<br />All Year Round
+              Your Home's<br />Perfect Climate
             </h1>
             <p className={styles.heroSub}>
               Professional HVAC solutions tailored to your comfort. From emergency
@@ -76,15 +76,15 @@ export default function HomePage() {
               system runs at peak performance every day.
             </p>
             <div className={styles.heroCtas}>
-              <Link href="/contact-us" className="btn btn-primary">
-                Book Service Now
-              </Link>
               <a
                 href={`tel:${config.phoneMain.replace(/\D/g, "")}`}
-                className="btn btn-outline"
+                className="btn btn-primary"
               >
-                Call {config.phoneMain}
+                <i className="fa-solid fa-phone"></i> Get Help Now
               </a>
+              <Link href="/contact-us" className="btn btn-secondary">
+                Book Service Now
+              </Link>
             </div>
           </div>
           <div className={styles.heroForm}>
@@ -100,7 +100,7 @@ export default function HomePage() {
           <div className={`${styles.servicesSectionHead} reveal`}>
             <span className={styles.servicesLabel}>Our Best Services</span>
             <h2 id="services-heading" className={styles.servicesH2}>
-              Breathe Easy Air Quality Assessment
+              Heating &amp; Cooling Solutions
             </h2>
             <p className={styles.servicesSub}>
               We handle everything from routine maintenance to emergency repairs and
@@ -111,7 +111,11 @@ export default function HomePage() {
 
           <div className={`${styles.servicesGrid} reveal-stagger`}>
             {config.services.map((svc) => (
-              <Link key={svc.slug} href={`/${svc.slug}`} className={styles.serviceCard}>
+              <Link
+                key={svc.slug}
+                href={`/${svc.slug}`}
+                className={`${styles.serviceCard} ${svc.category === "heating" ? styles.serviceCardHeat : styles.serviceCardCool}`}
+              >
                 <div className={styles.svcIcon}>
                   <i className={svc.faIcon}></i>
                 </div>
@@ -127,7 +131,7 @@ export default function HomePage() {
       <section className={`section ${styles.whySection}`} aria-labelledby="why-heading">
         <div className="container">
           <div className={styles.sectionHead}>
-            <span className="section-label" style={{ color: 'var(--brand-orange)' }}>Why Choose Us</span>
+            <span className="section-label" style={{ color: 'var(--brand-blue)' }}>Why Choose Us</span>
             <h2 id="why-heading" className="section-title" style={{ color: "#fff" }}>
               Relax, We've Got Your Air Climate Covered
             </h2>
@@ -135,14 +139,14 @@ export default function HomePage() {
           <div className={`${styles.valuesGrid} reveal-stagger`}>
             {VALUES.map((v) => (
               <div key={v.title} className={styles.valueCard}>
-                <span className={styles.valueIcon} style={{ color: "var(--brand-orange)" }}>{v.icon}</span>
+                <span className={styles.valueIcon} style={{ color: "var(--brand-blue)" }}>{v.icon}</span>
                 <h3>{v.title}</h3>
                 <p>{v.body}</p>
               </div>
             ))}
           </div>
           <div className={styles.whyCtas}>
-            <Link href="/contact-us" className="btn btn-primary">Book Service Now</Link>
+            <Link href="/contact-us" className="btn btn-primary">Get Help Now</Link>
             <a
               href={`tel:${config.phoneMain.replace(/\D/g, "")}`}
               className="btn btn-outline"
@@ -155,7 +159,7 @@ export default function HomePage() {
 
       <section className={`section-sm ${styles.areasSection}`}>
         <div className="container text-center reveal">
-          <span className="section-label" style={{ color: 'var(--brand-orange)' }}>Where We Work</span>
+          <span className="section-label" style={{ color: 'var(--brand-blue)' }}>Where We Work</span>
           <h2 className="section-title" style={{ color: "#fff", marginTop: 8 }}>
             Areas We Serve
           </h2>
@@ -181,15 +185,15 @@ export default function HomePage() {
             for professional, reliable service you can trust.
           </p>
           <div className={styles.finalCtaBtns}>
-            <Link href="/contact-us" className="btn btn-primary">
-              Book Service Now
-            </Link>
             <a
               href={`tel:${config.phoneMain.replace(/\D/g, "")}`}
-              className="btn btn-dark"
+              className="btn btn-primary"
             >
-              Call {config.phoneMain}
+              <i className="fa-solid fa-phone"></i> Get Help Now
             </a>
+            <Link href="/contact-us" className="btn btn-secondary">
+              Book Service Now
+            </Link>
           </div>
         </div>
       </section>

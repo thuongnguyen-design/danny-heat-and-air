@@ -73,7 +73,7 @@ export default function QuoteForm({ compact }) {
         {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
       </select>
 
-      <button type="submit" className={styles.submit} disabled={status === "submitting"}>
+      <button type="submit" className={`btn btn-primary ${styles.submit}`} disabled={status === "submitting"}>
         {status === "submitting" ? "Sending..." : "Book Now"}
       </button>
 

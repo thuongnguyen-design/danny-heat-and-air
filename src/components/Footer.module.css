@@ -1,4 +1,4 @@
-/* ── Footer — ArkdinAir Theme ── */
+/* ── Footer — Thermal Balance Theme ── */
 .footer {
   background: var(--brand-navy);
   color: rgba(255,255,255,0.7);
@@ -63,7 +63,7 @@
   left: 0;
   width: 36px;
   height: 3px;
-  background: var(--brand-orange);
+  background: var(--brand-blue);
   border-radius: 2px;
 }
 .col ul {
@@ -81,12 +81,12 @@
 }
 .col a::before {
   content: '›';
-  color: var(--brand-orange);
+  color: var(--brand-blue);
   font-weight: 700;
   font-size: 1rem;
 }
 .col a:hover {
-  color: var(--brand-orange);
+  color: var(--brand-blue);
   padding-left: 4px;
 }
 
@@ -109,9 +109,9 @@
   display: none;
 }
 
-/* ── Bottom Bar — Orange ── */
+/* ── Bottom Bar — Blue ── */
 .bottom {
-  background: var(--brand-orange);
+  background: var(--brand-blue);
   padding: 16px 0;
 }
 .bottom .container {

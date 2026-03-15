@@ -10,6 +10,7 @@ const BADGES = [
     ),
     label: "Licensed & Insured",
     sub: "Full coverage",
+    color: "blue",
   },
   {
     icon: (
@@ -18,8 +19,9 @@ const BADGES = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    label: "Same-Day Service",
-    sub: "Fast response",
+    label: "24/7 Availability",
+    sub: "Always on call",
+    color: "red",
   },
   {
     icon: (
@@ -28,8 +30,19 @@ const BADGES = [
         <polyline points="22 4 12 14.01 9 11.01" />
       </svg>
     ),
-    label: "100% Satisfaction",
-    sub: "Guaranteed",
+    label: "Same-Day Service",
+    sub: "Fast response",
+    color: "red",
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+    ),
+    label: "Maintenance Plans",
+    sub: "Peace of mind",
+    color: "blue",
   },
   {
     icon: (
@@ -40,6 +53,7 @@ const BADGES = [
     ),
     label: "Free Estimates",
     sub: "No obligation",
+    color: "blue",
   },
 ];
 
@@ -48,7 +62,7 @@ export default function TrustBadges() {
     <section className={styles.trustSection} aria-label="Trust indicators">
       <div className={`container ${styles.trustGrid}`}>
         {BADGES.map((b) => (
-          <div key={b.label} className={styles.badge}>
+          <div key={b.label} className={`${styles.badge} ${b.color === "red" ? styles.badgeRed : styles.badgeBlue}`}>
             <div className={styles.iconWrap}>
               {b.icon}
             </div>

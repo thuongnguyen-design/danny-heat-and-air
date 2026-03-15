@@ -1,6 +1,6 @@
-/* ── Top Bar — Orange ── */
+/* ── Top Bar — Light Blue ── */
 .topBar {
-  background: var(--brand-orange);
+  background: var(--brand-navy);
   color: #fff;
   font-size: 0.85rem;
   padding: 10px 0;
@@ -12,37 +12,33 @@
   gap: 8px;
 }
 
-@media (max-width: 768px) {
-  .topBar .container {
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;
-  }
-  .topBarText {
+@media (max-width: 900px) {
+  .topBar {
     display: none;
   }
-  .topBarCall {
-    width: 100%;
-    justify-content: center;
+}
+@media (min-width: 901px) and (max-width: 1024px) {
+  .topBarText {
+    font-size: 0.78rem;
   }
 }
 .topBarCall {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--brand-orange);
+  color: #fff;
   font-weight: 800;
   font-family: var(--font-display);
   font-size: 0.88rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  background: #fff;
+  background: var(--brand-red);
   padding: 6px 20px;
   border-radius: 20px;
   transition: var(--transition);
 }
 .topBarCall:hover {
-  background: var(--brand-navy);
+  background: var(--brand-red-dk);
   color: #fff;
   transform: translateY(-1px);
 }
@@ -54,12 +50,12 @@
   z-index: 900;
   background: var(--brand-white);
   transition: background 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 20px rgba(11,20,55,0.06);
+  box-shadow: 0 2px 20px rgba(26,39,68,0.06);
 }
 .header.scrolled {
   background: rgba(255,255,255,0.98);
   backdrop-filter: blur(12px);
-  box-shadow: 0 4px 30px rgba(11,20,55,0.10);
+  box-shadow: 0 4px 30px rgba(26,39,68,0.10);
 }
 
 .inner {
@@ -79,7 +75,7 @@
 }
 .logoIcon {
   font-size: 1.6rem;
-  color: var(--brand-orange);
+  color: var(--brand-blue);
   animation: spin 6s linear infinite;
 }
 @keyframes spin {
@@ -131,7 +127,7 @@
   left: 14px;
   right: 14px;
   height: 2px;
-  background: var(--brand-orange);
+  background: var(--brand-blue);
   border-radius: 1px;
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -140,7 +136,7 @@
   transform: scaleX(1);
 }
 .navLink:hover {
-  color: var(--brand-orange);
+  color: var(--brand-blue);
 }
 .caret {
   font-size: 0.6rem;
@@ -161,8 +157,8 @@
   border-radius: 0 0 var(--radius-md) var(--radius-md);
   box-shadow: var(--shadow-lift);
   overflow: hidden;
-  border: 1px solid rgba(11,20,55,0.06);
-  border-top: 3px solid var(--brand-orange);
+  border: 1px solid rgba(26,39,68,0.06);
+  border-top: 3px solid var(--brand-blue);
   animation: fadeUp 0.18s ease;
 }
 .dropdownItem {
@@ -173,12 +169,12 @@
   font-weight: 600;
   color: var(--brand-navy);
   letter-spacing: 0.02em;
-  border-bottom: 1px solid rgba(11,20,55,0.04);
+  border-bottom: 1px solid rgba(26,39,68,0.04);
   transition: var(--transition);
 }
 .dropdownItem:hover {
-  background: var(--brand-cream);
-  color: var(--brand-orange);
+  background: var(--brand-blue-pale);
+  color: var(--brand-blue-dk);
   padding-left: 26px;
 }
 
@@ -193,15 +189,15 @@
   box-shadow: var(--shadow-lift);
   display: flex;
   overflow: hidden;
-  border: 1px solid rgba(11,20,55,0.06);
-  border-top: 3px solid var(--brand-orange);
+  border: 1px solid rgba(26,39,68,0.06);
+  border-top: 3px solid var(--brand-blue);
   animation: fadeUp 0.18s ease;
 }
 .megaLeft {
   width: 240px;
   background: var(--brand-cream);
   padding: 10px 0;
-  border-right: 1px solid rgba(11,20,55,0.06);
+  border-right: 1px solid rgba(26,39,68,0.06);
 }
 .megaTab {
   padding: 14px 20px;
@@ -217,9 +213,9 @@
 }
 .megaTab:hover, .activeTab {
   background: #fff;
-  color: var(--brand-orange);
+  color: var(--brand-blue);
   font-weight: 700;
-  box-shadow: -3px 0 0 var(--brand-orange) inset;
+  box-shadow: -3px 0 0 var(--brand-blue) inset;
 }
 .megaArrow {
   font-size: 1.2rem;
@@ -243,7 +239,7 @@
   padding: 4px 0;
 }
 .megaLink:hover {
-  color: var(--brand-orange);
+  color: var(--brand-blue);
 }
 
 /* ── CTA Button ── */
@@ -252,6 +248,24 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+}
+
+/* ── Mobile Phone Icon ── */
+.mobilePhoneBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-red);
+  font-size: 20px;
+  padding: 8px;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+}
+.mobilePhoneBtn:hover,
+.mobilePhoneBtn:active {
+  color: var(--brand-red-dk);
 }
 
 /* ── Hamburger ── */
@@ -263,7 +277,7 @@
   border: none;
   cursor: pointer;
   padding: 8px;
-  margin-left: auto;
+  flex-shrink: 0;
 }
 .hamburger span {
   display: block;
@@ -277,7 +291,7 @@
 /* ── Mobile Menu ── */
 .mobileMenu {
   background: var(--brand-navy);
-  border-top: 3px solid var(--brand-orange);
+  border-top: 3px solid var(--brand-blue);
   padding: 20px 24px 28px;
   display: flex;
   flex-direction: column;
@@ -310,5 +324,35 @@
 
 @media (max-width: 900px) {
   .nav, .ctas { display: none; }
-  .hamburger   { display: flex; }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 0;
+  }
+
+  /* Hamburger — far left */
+  .hamburger {
+    display: flex;
+    order: 1;
+    margin: 0;
+    padding: 10px;
+  }
+
+  /* Logo — centered */
+  .logo {
+    order: 2;
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  /* Phone — far right */
+  .mobilePhoneBtn {
+    display: flex;
+    order: 3;
+  }
 }
