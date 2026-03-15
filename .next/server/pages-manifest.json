@@ -1,0 +1,10 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/furnace-installation": "pages/furnace-installation.js",
+  "/thermostats": "pages/thermostats.js",
+  "/furnace-repair": "pages/furnace-repair.js",
+  "/air-conditioner-installation": "pages/air-conditioner-installation.js"
+}

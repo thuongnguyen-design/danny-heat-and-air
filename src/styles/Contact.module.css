@@ -1,0 +1,238 @@
+/* ── Hero — ArkdinAir ────────────────────────────────────── */
+.hero {
+  position: relative;
+  background: var(--brand-navy);
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11,20,55,0.95) 0%, rgba(26,43,94,0.85) 100%);
+}
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding: 72px 20px;
+  color: #fff;
+}
+.heroLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--brand-orange);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+.heroLabel::after {
+  content: "";
+  width: 32px;
+  height: 3px;
+  background: var(--brand-orange);
+  border-radius: 2px;
+}
+.heroH1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  margin: 12px 0;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  color: #fff;
+}
+.heroSub {
+  color: rgba(255,255,255,0.75);
+  font-size: 1.1rem;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Map Section ──────────────────────────────────────────── */
+.mapSection {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background: var(--brand-cream);
+}
+.mapIframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 1;
+}
+.formWrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+  margin: 56px 0;
+  box-shadow: var(--shadow-lift);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  border: 1px solid rgba(11,20,55,0.05);
+  border-top: 4px solid var(--brand-orange);
+}
+
+/* ── Quick Info Grid ─────────────────────────────────────── */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding: var(--space-2xl) 0;
+  text-align: center;
+}
+.infoCard {
+  padding: 36px 28px;
+  border-radius: var(--radius-md);
+  background: #fff;
+  border: 1px solid rgba(11,20,55,0.05);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.infoCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--brand-orange);
+  transform: scaleX(0);
+  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+}
+.infoCard:hover::before {
+  transform: scaleX(1);
+}
+.infoCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lift);
+}
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--brand-orange-lt);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+.infoCard:hover .iconWrapper {
+  background: var(--brand-orange);
+}
+.infoCard:hover .iconWrapper svg {
+  stroke: #fff;
+}
+.infoCard h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--brand-navy);
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+.infoCard p, .infoCard a {
+  color: var(--text-mid);
+  text-decoration: none;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+.infoCard a {
+  font-weight: 600;
+  color: var(--brand-navy);
+  transition: var(--transition-fast);
+}
+.infoCard a:hover {
+  color: var(--brand-orange);
+}
+
+/* ── Emergency Banner ────────────────────────────────────── */
+.emergencyBanner {
+  background: var(--brand-navy);
+  color: #fff;
+  padding: var(--space-xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+.emergencyBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--brand-orange), transparent);
+}
+.emergencyInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.emergencyText h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 10px;
+  color: #fff;
+}
+.emergencyText p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .mapSection {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .mapIframe {
+    position: relative;
+    height: 350px;
+    order: 2;
+  }
+  .formWrapper {
+    order: 1;
+    margin: 24px auto;
+    width: calc(100% - 32px);
+    max-width: 480px;
+  }
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: var(--space-xl) 0;
+  }
+  .emergencyInner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .heroContent { padding: 56px 16px; }
+  .mapIframe { height: 280px; }
+  .formWrapper { width: calc(100% - 24px); margin: 20px auto; }
+  .infoCard { padding: 28px 20px; }
+  .iconWrapper { width: 48px; height: 48px; font-size: 1.3rem; }
+}

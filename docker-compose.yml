@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  hvac-website:
+    build: .
+    container_name: delta-sierra-hvac
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production

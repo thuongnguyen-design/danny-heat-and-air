@@ -1,0 +1,165 @@
+/* ── Footer — ArkdinAir Theme ── */
+.footer {
+  background: var(--brand-navy);
+  color: rgba(255,255,255,0.7);
+  margin-top: auto;
+}
+
+/* ── Top Strip ── */
+.topStrip {
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.topInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.socialLinks {
+  display: flex;
+  gap: 12px;
+}
+.socialLinks a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.7);
+  transition: var(--transition);
+}
+.socialLinks a:hover {
+  background: var(--brand-orange);
+  border-color: var(--brand-orange);
+  color: #fff;
+  transform: translateY(-3px);
+}
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logoText {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+}
+.footerPhone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* ── Main Grid ── */
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.col h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  position: relative;
+}
+.col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 36px;
+  height: 3px;
+  background: var(--brand-orange);
+  border-radius: 2px;
+}
+.col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.col a {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.col a::before {
+  content: '›';
+  color: var(--brand-orange);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.col a:hover {
+  color: var(--brand-orange);
+  padding-left: 4px;
+}
+
+/* Working hours */
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.88rem;
+}
+.hours li span:first-child {
+  color: rgba(255,255,255,0.6);
+}
+.hours li span:last-child {
+  color: #fff;
+  font-weight: 600;
+}
+.hours a::before {
+  display: none;
+}
+
+/* ── Bottom Bar — Orange ── */
+.bottom {
+  background: var(--brand-orange);
+  padding: 16px 0;
+}
+.bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: #fff;
+  font-weight: 600;
+}
+.links { display: flex; gap: 24px; }
+.links a {
+  color: #fff;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.links a:hover { opacity: 0.8; }
+.links a::before { display: none; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .topInner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 600px) {
+  .inner { grid-template-columns: 1fr; }
+  .bottom .container { flex-direction: column; text-align: center; }
+}

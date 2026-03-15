@@ -1,0 +1,379 @@
+/* src/styles/Home.module.css — ArkdinAir Brand */
+
+/* ── Hero ────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  background: var(--brand-navy);
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11,20,55,0.95) 0%, rgba(26,43,94,0.85) 50%, rgba(11,20,55,0.9) 100%);
+}
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.heroLeft { color: #fff; }
+.heroH1 {
+  color: #fff;
+  margin: 12px 0 20px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.heroSub {
+  color: rgba(255,255,255,0.75);
+  font-size: 1.1rem;
+  max-width: 480px;
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+.heroCtas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* ── Section header ──────────────────────────────────────── */
+.sectionHead {
+  max-width: 680px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+/* ── Services grid ───────────────────────────────────────── */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px;
+  border-radius: var(--radius-md);
+  background: #fff;
+  border: 1px solid rgba(11,20,55,0.05);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.serviceCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--brand-orange);
+  transform: scaleX(0);
+  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+}
+.serviceCard:hover::before {
+  transform: scaleX(1);
+}
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lift);
+  border-color: rgba(11,20,55,0.08);
+}
+.svcIcon {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--brand-orange-lt);
+}
+.svcTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 8px;
+}
+.svcTag {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  flex: 1;
+  line-height: 1.6;
+}
+.svcLink {
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--brand-orange);
+  letter-spacing: 0.04em;
+  transition: var(--transition);
+}
+.serviceCard:hover .svcLink {
+  letter-spacing: 0.08em;
+}
+
+/* ── Why section ─────────────────────────────────────────── */
+.whySection {
+  background: var(--brand-navy);
+  position: relative;
+  overflow: hidden;
+}
+.whySection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--brand-orange), transparent);
+}
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+.valueCard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  padding: 36px 28px;
+  text-align: center;
+  color: #fff;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.valueCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background: var(--brand-orange);
+  border-radius: 0 0 3px 3px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.valueCard:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-4px);
+}
+.valueCard:hover::before {
+  opacity: 1;
+}
+.valueIcon { font-size: 2.8rem; display: block; margin-bottom: 18px; }
+.valueCard h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.valueCard p { color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; }
+.whyCtas { display: flex; justify-content: center; gap: 16px; }
+
+/* ── Membership plans ────────────────────────────────────── */
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.planCard {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  border: 1px solid rgba(11,20,55,0.06);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+.planCard:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+.planHighlight {
+  border-color: var(--brand-orange);
+  box-shadow: 0 0 0 4px rgba(255,107,0,0.1), var(--shadow-lift);
+}
+.planBadge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--brand-orange);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.planName {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  text-align: center;
+}
+.planPrice {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--brand-orange);
+  text-align: center;
+}
+.planPerks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  list-style: none;
+}
+.planPerks li { font-size: 0.9rem; color: var(--text-mid); }
+
+/* ── Promotions ──────────────────────────────────────────── */
+.promoSection { background: var(--brand-cream); }
+.promoTitle { color: var(--brand-navy); margin-bottom: 32px; }
+.promoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+.promoCard {
+  background: var(--brand-navy);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  text-align: center;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.promoCard:hover { transform: translateY(-3px); background: var(--brand-orange); }
+.promoOffer {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--brand-orange);
+  line-height: 1;
+}
+.promoCard:hover .promoOffer { color: #fff; }
+.promoSub { font-size: 0.88rem; color: rgba(255,255,255,0.85); }
+.promoExpiry { font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
+
+/* ── Testimonials ────────────────────────────────────────── */
+.testimonialsWrap {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+  align-items: start;
+}
+.testimonialCard {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-lift);
+  border-left: 4px solid var(--brand-orange);
+}
+.stars { font-size: 1.4rem; color: #f59e0b; letter-spacing: 2px; margin-bottom: 12px; }
+.reviewTitle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 14px;
+}
+.reviewText {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.reviewer { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.reviewer strong { color: var(--brand-navy); }
+.source {
+  background: var(--brand-cream);
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-mid);
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+}
+.dots { display: flex; gap: 8px; }
+.dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--brand-silver);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.dotActive { background: var(--brand-orange); }
+.allReviews { display: flex; flex-direction: column; gap: 16px; }
+
+/* ── Areas ───────────────────────────────────────────────── */
+.areasSection { background: var(--brand-steel); }
+.areasList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+.areaChip {
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: var(--transition);
+}
+.areaChip:hover { background: var(--brand-orange); border-color: var(--brand-orange); }
+
+/* ── Final CTA ───────────────────────────────────────────── */
+.finalCta { background: var(--brand-cream); }
+.finalCtaInner { max-width: 680px; margin: 0 auto; }
+.finalCtaInner h2 { color: var(--brand-navy); margin-bottom: 16px; }
+.finalCtaInner p { color: var(--text-mid); margin-bottom: 32px; }
+.finalCtaBtns { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .heroContent { grid-template-columns: 1fr; }
+  .heroForm     { max-width: 500px; }
+  .valuesGrid, .plansGrid { grid-template-columns: 1fr; }
+  .testimonialsWrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .heroH1 { font-size: 2.4rem; }
+  .servicesGrid { grid-template-columns: 1fr; }
+}

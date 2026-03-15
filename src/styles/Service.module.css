@@ -1,0 +1,145 @@
+/* ── Hero — ArkdinAir ────────────────────────────────────── */
+.hero {
+  position: relative;
+  background: var(--brand-navy);
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11,20,55,0.95) 0%, rgba(26,43,94,0.85) 100%);
+}
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding: 72px 20px;
+  color: #fff;
+  max-width: 720px;
+}
+.heroLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--brand-orange);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+.heroLabel::after {
+  content: "";
+  width: 32px;
+  height: 3px;
+  background: var(--brand-orange);
+  border-radius: 2px;
+}
+.heroH1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  margin: 12px 0 0;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  color: #fff;
+}
+
+/* ── Service Content Layout ─────────────────────────────── */
+.mainLayout {
+  padding: var(--space-2xl) 0;
+  background: var(--brand-cream);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── Content area ───────────────────────────────────────── */
+.contentWrapper h2 {
+  font-family: var(--font-display);
+  color: var(--brand-navy);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 24px;
+  line-height: 1.15;
+}
+.contentWrapper h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-top: 44px;
+  margin-bottom: 18px;
+  line-height: 1.2;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(11,20,55,0.08);
+}
+.contentWrapper p {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* ── Benefits / signs list ──────────────────────────────── */
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.benefitsList li {
+  font-size: 1.02rem;
+  color: var(--brand-navy);
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(11,20,55,0.06);
+  transition: var(--transition-fast);
+}
+.benefitsList li:first-child {
+  border-top: 1px solid rgba(11,20,55,0.06);
+}
+.benefitsList li:hover {
+  padding-left: 8px;
+  color: var(--brand-orange);
+}
+
+/* ── Sidebar form ───────────────────────────────────────── */
+.formSidebar {
+  position: sticky;
+  top: 100px;
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lift);
+  border: 1px solid rgba(11,20,55,0.05);
+  border-top: 4px solid var(--brand-orange);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .mainLayout { padding: var(--space-xl) 0; }
+  .grid { grid-template-columns: 1fr; gap: 40px; }
+  .formSidebar { position: relative; top: 0; }
+}
+@media (max-width: 600px) {
+  .heroContent { padding: 56px 16px; }
+  .formSidebar { padding: 24px 18px; }
+  .contentWrapper h2 { font-size: 1.8rem; }
+  .benefitsList li { font-size: 0.95rem; padding: 12px 0; }
+}
