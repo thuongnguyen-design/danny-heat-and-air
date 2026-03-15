@@ -7,7 +7,7 @@ const navItems = [
   { label: "Home", href: "/" },
   {
     label: "Services",
-    href: "#",
+    href: "/services",
     megaMenu: [
       {
         label: "Heating",

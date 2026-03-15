@@ -95,26 +95,29 @@ export default function HomePage() {
 
       <TrustBadges />
 
-      <section className="section" aria-labelledby="services-heading" style={{ background: 'var(--brand-cream)' }}>
+      <section className={`section ${styles.servicesSection}`} aria-labelledby="services-heading">
         <div className="container">
-          <div className={`${styles.sectionHead} reveal`}>
-            <span className="section-label">Our Best Services</span>
-            <h2 id="services-heading" className="section-title">
+          <div className={`${styles.servicesSectionHead} reveal`}>
+            <span className={styles.servicesLabel}>Our Best Services</span>
+            <h2 id="services-heading" className={styles.servicesH2}>
               Breathe Easy Air Quality Assessment
             </h2>
-            <p className="section-sub">
+            <p className={styles.servicesSub}>
               We handle everything from routine maintenance to emergency repairs and
               full system replacements — keeping your home comfortable year-round.
             </p>
+            <hr className={styles.servicesDivider} />
           </div>
 
           <div className={`${styles.servicesGrid} reveal-stagger`}>
             {config.services.map((svc) => (
               <Link key={svc.slug} href={`/${svc.slug}`} className={styles.serviceCard}>
-                <span className={styles.svcIcon}>{svc.icon}</span>
+                <div className={styles.svcIcon}>
+                  <i className={svc.faIcon}></i>
+                </div>
                 <h3 className={styles.svcTitle}>{svc.title}</h3>
                 <p className={styles.svcTag}>{svc.tagline}</p>
-                <span className={styles.svcLink}>Read More →</span>
+                <span className={styles.svcLink}>Read More <i className="fa-solid fa-arrow-right"></i></span>
               </Link>
             ))}
           </div>

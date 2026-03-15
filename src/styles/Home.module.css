@@ -53,79 +53,151 @@
   text-align: center;
 }
 
+/* ── Services section ────────────────────────────────────── */
+.servicesSection {
+  background: #F5F0E8;
+  position: relative;
+}
+.servicesSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: radial-gradient(#D4C9BA 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+.servicesSection > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section header overrides for services */
+.servicesSectionHead {
+  max-width: 680px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+.servicesLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--brand-orange);
+  margin-bottom: 14px;
+}
+.servicesLabel::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background: var(--brand-orange);
+  border-radius: 2px;
+}
+.servicesH2 {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 900;
+  color: #0B1437;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.servicesSub {
+  font-size: 15px;
+  color: #6B7280;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.servicesDivider {
+  width: 60px;
+  height: 1px;
+  background: #E5DDD5;
+  margin: 28px auto 48px;
+  border: none;
+}
+
 /* ── Services grid ───────────────────────────────────────── */
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 .serviceCard {
   display: flex;
   flex-direction: column;
-  padding: 32px 28px;
-  border-radius: var(--radius-md);
-  background: #fff;
-  border: 1px solid rgba(11,20,55,0.05);
-  box-shadow: var(--shadow-card);
-  transition: var(--transition);
+  padding: 32px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #FFF8F4 100%);
+  border-left: 3px solid transparent;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: all 0.25s ease;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
-}
-.serviceCard::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--brand-orange);
-  transform: scaleX(0);
-  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
-}
-.serviceCard:hover::before {
-  transform: scaleX(1);
+  min-height: 220px;
 }
 .serviceCard:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lift);
-  border-color: rgba(11,20,55,0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  border-left-color: #F5620F;
+  background: linear-gradient(180deg, #FFFAF6 0%, #FFFAF6 100%);
 }
 .svcIcon {
-  font-size: 2.4rem;
-  margin-bottom: 14px;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #FFF0E6;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  background: var(--brand-orange-lt);
+  margin-bottom: 18px;
+  font-size: 22px;
+  color: #F5620F;
+  transition: all 0.25s ease;
+}
+.serviceCard:hover .svcIcon {
+  background: var(--brand-orange);
+  color: #fff;
 }
 .svcTitle {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--brand-navy);
+  font-size: 18px;
+  font-weight: 800;
+  color: #0B1437;
   margin-bottom: 8px;
+  letter-spacing: -0.3px;
 }
 .svcTag {
-  font-size: 0.88rem;
-  color: var(--text-mid);
+  font-size: 14px;
+  color: #6B7280;
   flex: 1;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .svcLink {
-  margin-top: 16px;
+  margin-top: 18px;
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: 13px;
   font-weight: 700;
-  color: var(--brand-orange);
-  letter-spacing: 0.04em;
-  transition: var(--transition);
+  color: #F5620F;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+.svcLink i {
+  font-size: 0.7rem;
+  transition: all 0.25s ease;
 }
 .serviceCard:hover .svcLink {
-  letter-spacing: 0.08em;
+  text-decoration: underline;
+}
+.serviceCard:hover .svcLink i {
+  margin-left: 4px;
 }
 
 /* ── Why section ─────────────────────────────────────────── */
@@ -373,7 +445,12 @@
   .valuesGrid, .plansGrid { grid-template-columns: 1fr; }
   .testimonialsWrap { grid-template-columns: 1fr; }
 }
+@media (max-width: 900px) {
+  .servicesGrid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 768px) {
   .heroH1 { font-size: 2.4rem; }
+}
+@media (max-width: 600px) {
   .servicesGrid { grid-template-columns: 1fr; }
 }
