@@ -30,7 +30,7 @@ export default function QuoteForm({ compact }) {
       phone: e.target.phone.value,
       email: e.target.email.value,
       service: e.target.service.value,
-      botcheck: e.target.botcheck.value,
+      botcheck: "",
     };
 
     try {
@@ -76,14 +76,7 @@ export default function QuoteForm({ compact }) {
         {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
       </select>
 
-      {/* Honeypot — bots fill it, humans don't see it */}
-      <input
-        type="checkbox"
-        name="botcheck"
-        tabIndex="-1"
-        autoComplete="off"
-        style={{ display: "none" }}
-      />
+      <input type="hidden" name="botcheck" value="" />
 
       <button type="submit" className={`btn btn-primary ${styles.submit}`} disabled={status === "submitting"}>
         {status === "submitting" ? "Sending..." : "Book Now"}
