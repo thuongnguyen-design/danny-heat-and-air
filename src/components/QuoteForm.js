@@ -22,14 +22,19 @@ export default function QuoteForm({ compact }) {
     e.preventDefault();
     setStatus("submitting");
 
+    const name = e.target.name.value;
+    const service = e.target.service.value;
+
     const payload = {
       access_key: WEB3FORMS_ACCESS_KEY,
-      subject: "New service request from danny-heat-and-air.com",
-      from_name: "DANNY Heat & Air Website",
-      name: e.target.name.value,
-      phone: e.target.phone.value,
-      email: e.target.email.value,
-      service: e.target.service.value,
+      subject: `🔧 New ${service} Request from ${name}`,
+      from_name: name,
+      replyto: e.target.email.value,
+      "Customer Name": name,
+      "Phone Number": e.target.phone.value,
+      "Email": e.target.email.value,
+      "Service Needed": service,
+      "Message": e.target.message.value || "No message provided",
       botcheck: "",
     };
 
@@ -75,6 +80,13 @@ export default function QuoteForm({ compact }) {
         <option value="" disabled>Select Service Needed...</option>
         {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
       </select>
+
+      <textarea
+        name="message"
+        placeholder="Describe your issue (optional)"
+        rows={3}
+        className={`${styles.input} ${styles.fullWidth}`}
+      />
 
       <input type="hidden" name="botcheck" value="" />
 
