@@ -11,7 +11,7 @@ export default function ACRepair() {
         <meta name="description" content={`Beat the ${config.city} heat with fast, affordable AC repair from ${config.siteName}. We fix all makes and models with a price match guarantee.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeCool}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Cooling Services</span>
@@ -20,7 +20,7 @@ export default function ACRepair() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeCool}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,7 +32,7 @@ export default function ACRepair() {
               Our expert technicians arrive in fully-stocked trucks, ready to diagnose and fix most AC issues right on the spot. From blown capacitors to refrigerant leaks, we have the tools and experience to get the cold air flowing again.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Common Signs You Need AC Repair:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-blue-dk)" }}>Common Signs You Need AC Repair:</h3>
             <ul className={styles.benefitsList}>
               <li>• Blowing warm or room-temperature air</li>
               <li>• Weak airflow from your vents</li>

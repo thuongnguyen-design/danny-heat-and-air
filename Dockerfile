@@ -2,8 +2,8 @@
 FROM node:20-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY package.json ./
-RUN npm install
+COPY package.json package-lock.json* ./
+RUN npm install --ignore-scripts && npm rebuild
 
 # Stage 2: Build the Next.js app
 FROM node:20-alpine AS builder

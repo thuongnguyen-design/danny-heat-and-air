@@ -8,24 +8,31 @@ import styles from "@/styles/Home.module.css";
 const VALUES = [
   {
     icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
     ),
-    title: "24/7 Online Support",
-    body: "Round-the-clock emergency service and customer support. We're always here when you need us most — day or night.",
+    title: "Family-Owned & Operated",
+    body: "We're not a faceless corporation — we're your neighbors. As a local family business, we treat every home like our own and every customer like family.",
   },
   {
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
     ),
     title: "Price Match Guarantee",
-    body: "We refuse to be beaten on price. We will confidently match any local company's price to ensure you get the best deal possible.",
+    body: "Found a lower price? We'll match it. We refuse to be beaten on price and will confidently match any local company's quote — guaranteed.",
   },
   {
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
     ),
-    title: "Affordable Pricing",
-    body: "As a local family business, we treat you like neighbors. We offer the most competitive quotes, prices, and service fees in town.",
+    title: "Most Competitive Rates",
+    body: "The best prices in Stockton — period. Our low overhead as a family business means we pass the savings to you with the most competitive service fees in town.",
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    ),
+    title: "Loyalty Discounts",
+    body: "Returning customers get exclusive pricing on every visit. It's our way of saying thanks for choosing us again.",
   },
 ];
 
@@ -53,7 +60,7 @@ export default function HomePage() {
                 "addressLocality": config.city,
                 "addressRegion": config.state,
               },
-              "openingHours": "Mo-Fr 07:00-18:00",
+              "openingHours": "Mo-Su 09:00-22:00",
               "priceRange": "$$",
             }),
           }}
@@ -65,25 +72,25 @@ export default function HomePage() {
         <div className={`container ${styles.heroContent}`}>
           <div className={styles.heroLeft}>
             <span className={styles.heroLabel}>
-              <span className={styles.heroLabelBar}></span> Year-Round Comfort
+              <span className={styles.heroLabelBar}></span> Family-Owned &amp; Operated
             </span>
             <h1 className={styles.heroH1}>
               Your Home's<br />Perfect Climate
             </h1>
             <p className={styles.heroSub}>
-              Professional HVAC solutions tailored to your comfort. From emergency
-              repairs to seasonal maintenance, our certified technicians ensure your
-              system runs at peak performance every day.
+              Stockton's trusted family HVAC experts. We offer the most competitive
+              prices in town, match any company's quote, and reward loyal customers
+              with exclusive discounts.
             </p>
             <div className={styles.heroCtas}>
               <a
                 href={`tel:${config.phoneMain.replace(/\D/g, "")}`}
                 className="btn btn-primary"
               >
-                <i className="fa-solid fa-phone"></i> Get Help Now
+                <i className="fa-solid fa-phone"></i> Call Now
               </a>
               <Link href="/contact-us" className="btn btn-secondary">
-                Book Service Now
+                Request a Service
               </Link>
             </div>
           </div>
@@ -131,9 +138,9 @@ export default function HomePage() {
       <section className={`section ${styles.whySection}`} aria-labelledby="why-heading">
         <div className="container">
           <div className={styles.sectionHead}>
-            <span className="section-label" style={{ color: 'var(--brand-blue)' }}>Why Choose Us</span>
+            <span className={`section-label ${styles.lightLabel}`}>Why Choose Us</span>
             <h2 id="why-heading" className="section-title" style={{ color: "#fff" }}>
-              Relax, We've Got Your Air Climate Covered
+              Relax, We've Got Your Comfort Covered
             </h2>
           </div>
           <div className={`${styles.valuesGrid} reveal-stagger`}>
@@ -146,7 +153,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className={styles.whyCtas}>
-            <Link href="/contact-us" className="btn btn-primary">Get Help Now</Link>
+            <Link href="/contact-us" className="btn btn-secondary">Request a Service</Link>
             <a
               href={`tel:${config.phoneMain.replace(/\D/g, "")}`}
               className="btn btn-outline"
@@ -159,8 +166,8 @@ export default function HomePage() {
 
       <section className={`section-sm ${styles.areasSection}`}>
         <div className="container text-center reveal">
-          <span className="section-label" style={{ color: 'var(--brand-blue)' }}>Where We Work</span>
-          <h2 className="section-title" style={{ color: "#fff", marginTop: 8 }}>
+          <span className="section-label" style={{ color: 'var(--brand-blue-dk)' }}>Where We Work</span>
+          <h2 className="section-title" style={{ color: "var(--brand-navy)", marginTop: 8 }}>
             Areas We Serve
           </h2>
           <div className={styles.areasList}>
@@ -181,18 +188,19 @@ export default function HomePage() {
         <div className={`container text-center ${styles.finalCtaInner} reveal`}>
           <h2>Ready to Experience Lasting Home Comfort?</h2>
           <p>
-            Don't let HVAC issues disrupt your comfort. Contact {config.siteName} today
-            for professional, reliable service you can trust.
+            From quick repairs to full system replacements, we're here every day
+            from 9AM to 10PM. Get a fast, no-pressure quote and see why your
+            neighbors call us first.
           </p>
           <div className={styles.finalCtaBtns}>
             <a
               href={`tel:${config.phoneMain.replace(/\D/g, "")}`}
               className="btn btn-primary"
             >
-              <i className="fa-solid fa-phone"></i> Get Help Now
+              <i className="fa-solid fa-phone"></i> Call Now
             </a>
             <Link href="/contact-us" className="btn btn-secondary">
-              Book Service Now
+              Request a Service
             </Link>
           </div>
         </div>

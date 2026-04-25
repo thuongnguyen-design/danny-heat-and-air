@@ -90,8 +90,7 @@ export default function TermsOfService() {
           <p>
             Payment is due upon completion of service unless other arrangements
             have been made in writing. We accept cash, check, and major credit
-            cards. Financing options may be available for qualifying customers
-            through our third-party financing partners.
+            cards.
           </p>
           <p>
             Past-due accounts may be subject to collection fees and interest as

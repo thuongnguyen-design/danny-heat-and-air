@@ -8,10 +8,10 @@ export default function FurnaceInstallation() {
     <>
       <Head>
         <title>Furnace Installation & Replacement | {config.siteName}</title>
-        <meta name="description" content={`Upgrade to a high-efficiency furnace with ${config.siteName} in ${config.city}. Ask about our flexible financing options!`} />
+        <meta name="description" content={`Upgrade to a high-efficiency furnace with ${config.siteName} in ${config.city}. Free estimates and competitive pricing!`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeHeat}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Heating Services</span>
@@ -20,7 +20,7 @@ export default function FurnaceInstallation() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeHeat}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,11 +32,10 @@ export default function FurnaceInstallation() {
               At {config.siteName}, we specialize in installing high-efficiency heating systems tailored to the exact size and needs of your home in {config.city}. A new system doesn't just improve your comfort; it can significantly lower your monthly energy bills.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Why Choose Us for Installation?</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-red)" }}>Why Choose Us for Installation?</h3>
             <ul className={styles.benefitsList}>
               <li>• Free, no-pressure replacement estimates</li>
               <li>• We Match Any Competitor's Price</li>
-              <li>• Flexible financing options available</li>
               <li>• Clean, respectful, and uniformed installers</li>
               <li>• We haul away your old system for free</li>
             </ul>

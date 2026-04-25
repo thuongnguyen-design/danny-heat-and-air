@@ -11,7 +11,7 @@ export default function WaterHeaterRepair() {
         <meta name="description" content={`No hot water? Leaking tank? Get fast water heater repair in ${config.city} from the family-owned experts at ${config.siteName}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeWater}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Plumbing & Heating</span>
@@ -20,7 +20,7 @@ export default function WaterHeaterRepair() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeWater}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,7 +32,7 @@ export default function WaterHeaterRepair() {
               Our expert technicians arrive fast and carry the parts needed to fix most standard gas and electric water heaters on the very first visit. We diagnose the issue honestly and give you a flat-rate price before any work begins.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Signs Your Water Heater Needs Repair:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-blue-dk)" }}>Signs Your Water Heater Needs Repair:</h3>
             <ul className={styles.benefitsList}>
               <li>• Water is lukewarm or goes cold rapidly</li>
               <li>• Rumbling, popping, or banging noises from the tank</li>

@@ -34,7 +34,7 @@
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-weight: 700;
-  color: var(--brand-orange);
+  color: var(--brand-red);
   font-family: var(--font-display);
   font-size: 0.82rem;
   margin-bottom: 8px;
@@ -43,7 +43,7 @@
   content: "";
   width: 32px;
   height: 3px;
-  background: var(--brand-orange);
+  background: var(--brand-red);
   border-radius: 2px;
 }
 .heroH1 {
@@ -87,7 +87,7 @@
   border-radius: var(--radius-lg);
   background: #fff;
   border: 1px solid rgba(11,20,55,0.05);
-  border-top: 4px solid var(--brand-orange);
+  border-top: 4px solid var(--brand-red);
 }
 
 /* ── Quick Info Grid ─────────────────────────────────────── */
@@ -115,7 +115,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--brand-orange);
+  background: var(--brand-red);
   transform: scaleX(0);
   transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
 }
@@ -134,12 +134,12 @@
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  background: var(--brand-orange-lt);
+  background: var(--brand-red-lt);
   font-size: 1.5rem;
   transition: var(--transition);
 }
 .infoCard:hover .iconWrapper {
-  background: var(--brand-orange);
+  background: var(--brand-red);
 }
 .infoCard:hover .iconWrapper svg {
   stroke: #fff;
@@ -163,7 +163,7 @@
   transition: var(--transition-fast);
 }
 .infoCard a:hover {
-  color: var(--brand-orange);
+  color: var(--brand-red);
 }
 
 /* ── Emergency Banner ────────────────────────────────────── */
@@ -181,7 +181,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--brand-orange), transparent);
+  background: linear-gradient(90deg, transparent, var(--brand-red), transparent);
 }
 .emergencyInner {
   display: flex;

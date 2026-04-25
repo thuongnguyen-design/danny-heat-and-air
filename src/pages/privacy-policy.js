@@ -92,8 +92,8 @@ export default function PrivacyPolicy() {
 
           <h2>6. Third-Party Links</h2>
           <p>
-            Our website may contain links to third-party sites (such as financing
-            partners or review platforms). We are not responsible for the privacy
+            Our website may contain links to third-party sites (such as review
+            platforms or social media). We are not responsible for the privacy
             practices or content of those external sites. We encourage you to review
             their privacy policies before providing any personal information.
           </p>

@@ -12,7 +12,7 @@ export default function AirConditioning() {
         <meta name="description" content={`Expert air conditioning repair, installation, and maintenance in ${config.city}. Stay cool with ${config.siteName}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeCool}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Category Overview</span>
@@ -21,7 +21,7 @@ export default function AirConditioning() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeCool}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -30,7 +30,7 @@ export default function AirConditioning() {
               A reliable air conditioner is not a luxury in {config.city}—it's a necessity. From emergency weekend repairs to full system replacements, our technicians are trained to handle the toughest AC problems with speed and precision.
             </p>
             
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Explore Our Cooling Services:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-blue-dk)" }}>Explore Our Cooling Services:</h3>
             <ul className={styles.benefitsList}>
               <li>• <Link href="/air-conditioning-repair" style={{color: "var(--brand-navy)", fontWeight: "bold"}}>AC Repair</Link> - Rapid response to get the cold air flowing again.</li>
               <li>• <Link href="/air-conditioner-installation" style={{color: "var(--brand-navy)", fontWeight: "bold"}}>AC Replacement</Link> - High-efficiency systems perfectly sized for your home.</li>

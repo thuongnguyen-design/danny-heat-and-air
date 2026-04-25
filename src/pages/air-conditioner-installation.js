@@ -11,7 +11,7 @@ export default function ACInstallation() {
         <meta name="description" content={`Upgrade to a high-efficiency air conditioner with ${config.siteName}. Enjoy lower energy bills and superior comfort in ${config.city}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeCool}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Cooling Services</span>
@@ -20,7 +20,7 @@ export default function ACInstallation() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeCool}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,7 +32,7 @@ export default function ACInstallation() {
               At {config.siteName}, we install top-tier, high-efficiency cooling systems designed to beat the heat while saving you money. We precisely calculate your home's cooling load so you get a system perfectly sized for your needs—no guessing involved.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Benefits of a New AC System:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-blue-dk)" }}>Benefits of a New AC System:</h3>
             <ul className={styles.benefitsList}>
               <li>• Significantly lower monthly utility bills</li>
               <li>• Quieter operation inside and outside your home</li>
@@ -43,7 +43,7 @@ export default function ACInstallation() {
 
             <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-navy)" }}>Affordable Comfort</h3>
             <p>
-              A new AC is a big investment, but we make it easy. We offer flexible financing options and will gladly price match any local competitor. Let us help you find the perfect system for your budget.
+              A new AC is a big investment, but we make it easy. We offer the most competitive prices in town and will gladly price match any local competitor. Let us help you find the perfect system for your budget.
             </p>
           </div>
 

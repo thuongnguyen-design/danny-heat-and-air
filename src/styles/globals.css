@@ -2,14 +2,14 @@
 
 /* ── Design System Variables — Thermal Balance ──────── */
 :root {
-  --brand-blue:      #3B9FD9;
-  --brand-blue-dk:   #2B7FB5;
-  --brand-blue-lt:   rgba(59,159,217,0.10);
-  --brand-blue-pale: #EBF5FB;
-  --brand-red:       #E53935;
-  --brand-red-dk:    #C62828;
-  --brand-red-lt:    rgba(229,57,53,0.10);
-  --brand-red-pale:  #FDECEC;
+  --brand-blue:      #0DA5BD;
+  --brand-blue-dk:   #067E91;
+  --brand-blue-lt:   rgba(13,165,189,0.10);
+  --brand-blue-pale: #E6F7FA;
+  --brand-red:       #A52A2D;
+  --brand-red-dk:    #7E1F22;
+  --brand-red-lt:    rgba(165,42,45,0.10);
+  --brand-red-pale:  #F8E8E8;
   --brand-navy:      #1A2744;
   --brand-navy-md:   #263A5E;
   --brand-steel:     #2F4A73;
@@ -79,8 +79,8 @@ h1, h2, h3, h4 {
 }
 h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 800; }
 h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; }
-h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 600; }
-p  { line-height: 1.75; color: var(--text-mid); font-size: 1.02rem; }
+h3 { font-size: clamp(1.35rem, 2.5vw, 1.8rem); font-weight: 600; }
+p  { line-height: 1.75; color: var(--text-mid); font-size: 1.08rem; }
 
 /* ── Layout helpers ──────────────────────────────────── */
 .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
@@ -225,10 +225,10 @@ p  { line-height: 1.75; color: var(--text-mid); font-size: 1.02rem; }
   border-radius: 2px;
 }
 .section-title { color: var(--brand-navy); margin-bottom: 20px; }
-.section-sub   { max-width: 620px; font-size: 1.08rem; line-height: 1.7; }
+.section-sub   { max-width: 620px; font-size: 1.18rem; line-height: 1.7; }
 
 /* ── Star rating ─────────────────────────────────────── */
-.stars { color: #f59e0b; letter-spacing: 2px; font-size: 1.1rem; }
+.stars { color: #f59e0b; letter-spacing: 2px; font-size: 1.3rem; }
 
 /* ── Utility ─────────────────────────────────────────── */
 .visually-hidden {

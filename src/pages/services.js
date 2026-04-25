@@ -86,7 +86,11 @@ export default function ServicesPage() {
 
           <div className={`${styles.servicesGrid} reveal-stagger`}>
             {config.services.map((svc) => (
-              <Link key={svc.slug} href={`/${svc.slug}`} className={styles.serviceCard}>
+              <Link
+                key={svc.slug}
+                href={`/${svc.slug}`}
+                className={`${styles.serviceCard} ${svc.category === "heating" ? styles.serviceCardHeat : styles.serviceCardCool}`}
+              >
                 <div className={styles.svcIcon}>
                   <i className={svc.faIcon}></i>
                 </div>
@@ -113,7 +117,7 @@ export default function ServicesPage() {
 
           <div className={`${styles.catGrid} reveal-stagger`}>
             {CATEGORIES.map((cat) => (
-              <div key={cat.slug} className={styles.catCard}>
+              <div key={cat.slug} className={`${styles.catCard} ${styles[`catCard_${cat.slug}`] || ""}`}>
                 <div className={styles.catHeader}>
                   <div className={styles.catIcon}>
                     <i className={cat.faIcon}></i>

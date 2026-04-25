@@ -13,6 +13,8 @@ const SERVICES = [
   "Other"
 ];
 
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "";
+
 export default function QuoteForm({ compact }) {
   const [status, setStatus] = useState("idle");
 
@@ -20,28 +22,29 @@ export default function QuoteForm({ compact }) {
     e.preventDefault();
     setStatus("submitting");
 
-    // Grab the values the customer typed in
-    const formData = {
+    const payload = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: "New service request from danny-heat-and-air.com",
+      from_name: "DANNY Heat & Air Website",
       name: e.target.name.value,
       phone: e.target.phone.value,
       email: e.target.email.value,
       service: e.target.service.value,
+      botcheck: e.target.botcheck.value,
     };
 
     try {
-      // Send the data to your new backend API
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
       });
-
-      if (res.ok) {
-        setStatus("success");
-      } else {
-        setStatus("error");
-      }
-    } catch (error) {
+      const data = await res.json();
+      setStatus(data.success ? "success" : "error");
+    } catch {
       setStatus("error");
     }
   };
@@ -60,7 +63,7 @@ export default function QuoteForm({ compact }) {
     <form className={`${styles.form} ${compact ? styles.compact : ""}`} onSubmit={handleSubmit}>
       <h3 className={styles.formTitle}>Book Service Now</h3>
       <p className={styles.formSub}>Fast, reliable HVAC service.</p>
-      
+
       <div className={styles.grid}>
         <input type="text" name="name" placeholder="Your Name" required className={styles.input} />
         <input type="tel" name="phone" placeholder="Phone Number" required className={styles.input} />
@@ -73,6 +76,15 @@ export default function QuoteForm({ compact }) {
         {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
       </select>
 
+      {/* Honeypot — bots fill it, humans don't see it */}
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabIndex="-1"
+        autoComplete="off"
+        style={{ display: "none" }}
+      />
+
       <button type="submit" className={`btn btn-primary ${styles.submit}`} disabled={status === "submitting"}>
         {status === "submitting" ? "Sending..." : "Book Now"}
       </button>
@@ -80,7 +92,7 @@ export default function QuoteForm({ compact }) {
       {status === "error" && (
         <p className={styles.errorBanner}>Oops! Something went wrong. Please call us instead.</p>
       )}
-      
+
       <p className={styles.privacy}>Your information is secure.</p>
     </form>
   );

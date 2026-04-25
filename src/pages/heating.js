@@ -12,7 +12,7 @@ export default function Heating() {
         <meta name="description" content={`Complete heating services in ${config.city}, including furnace repair, installation, and maintenance.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeHeat}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Category Overview</span>
@@ -21,7 +21,7 @@ export default function Heating() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeHeat}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -30,7 +30,7 @@ export default function Heating() {
               At {config.siteName}, we provide end-to-end heating solutions for homeowners in {config.city}. Whether your furnace has completely broken down, or you are looking to upgrade to a high-efficiency system, our family-owned team is ready to help.
             </p>
             
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Explore Our Heating Services:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-red)" }}>Explore Our Heating Services:</h3>
             <ul className={styles.benefitsList}>
               <li>• <Link href="/furnace-repair" style={{color: "var(--brand-navy)", fontWeight: "bold"}}>Furnace Repair</Link> - Fast, reliable fixes for all makes and models.</li>
               <li>• <Link href="/furnace-installation" style={{color: "var(--brand-navy)", fontWeight: "bold"}}>Furnace Installation</Link> - Energy-efficient upgrades with competitive pricing.</li>

@@ -11,7 +11,7 @@ export default function Tankless() {
         <meta name="description" content={`Get endless hot water and save space with a high-efficiency tankless water heater from ${config.siteName}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeWater}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Plumbing & Heating</span>
@@ -20,7 +20,7 @@ export default function Tankless() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeWater}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,7 +32,7 @@ export default function Tankless() {
               Because tankless systems don't waste energy keeping 50 gallons of water hot 24/7, they are incredibly energy-efficient. {config.siteName} specializes in upgrading older homes in {config.city} to these modern, space-saving systems.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>The Tankless Advantage:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-blue-dk)" }}>The Tankless Advantage:</h3>
             <ul className={styles.benefitsList}>
               <li>• Endless hot water for large families and luxury showers</li>
               <li>• Massive space savings (mounts cleanly on the wall)</li>

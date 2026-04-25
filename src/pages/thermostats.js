@@ -11,7 +11,7 @@ export default function Thermostats() {
         <meta name="description" content={`Upgrade your home's comfort with a smart WiFi thermostat installed by the experts at ${config.siteName}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeHeat}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Heating Services</span>
@@ -20,7 +20,7 @@ export default function Thermostats() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeHeat}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,7 +32,7 @@ export default function Thermostats() {
               {config.siteName} can help you troubleshoot a stubborn thermostat or seamlessly upgrade your home to the latest smart Wi-Fi models. We handle the complex wiring so you don't have to guess.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Why Upgrade to a Smart Thermostat?</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-red)" }}>Why Upgrade to a Smart Thermostat?</h3>
             <ul className={styles.benefitsList}>
               <li>• Control your home's temperature from your smartphone anywhere</li>
               <li>• Automatically adjust temps when you leave to save energy</li>

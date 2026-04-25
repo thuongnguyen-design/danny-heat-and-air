@@ -1,5 +1,9 @@
 node_modules/
 .next/
+out/
+.env
+.env.local
 .env.production
 *.pack.gz
 *.pack.gz.old
+.DS_Store

@@ -11,7 +11,7 @@ export default function WaterHeaterReplacement() {
         <meta name="description" content={`Upgrade your old, leaking water heater with a high-efficiency tank installed by ${config.siteName} in ${config.city}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeWater}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Plumbing & Heating</span>
@@ -20,7 +20,7 @@ export default function WaterHeaterReplacement() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeWater}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,7 +32,7 @@ export default function WaterHeaterReplacement() {
               At {config.siteName}, we install premium, energy-efficient gas and electric water heaters designed to provide reliable hot water for your family. We handle the heavy lifting, the permits, and the safe disposal of your old, rusted tank.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Why Replace Your Water Heater With Us?</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-blue-dk)" }}>Why Replace Your Water Heater With Us?</h3>
             <ul className={styles.benefitsList}>
               <li>• Free, transparent estimates on new installations</li>
               <li>• We Match Any Competitor's Price</li>
@@ -43,7 +43,7 @@ export default function WaterHeaterReplacement() {
 
             <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-navy)" }}>Affordable Upgrades</h3>
             <p>
-              We know a new water heater is usually an unexpected expense. That is why our family business offers highly competitive rates and flexible financing options to ensure you don't have to break the bank for a hot shower.
+              We know a new water heater is usually an unexpected expense. That is why our family business offers highly competitive rates and price match any local competitor — so you don't have to break the bank for a hot shower.
             </p>
           </div>
 

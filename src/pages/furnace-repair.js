@@ -11,7 +11,7 @@ export default function FurnaceRepair() {
         <meta name="description" content={`Fast, affordable, and reliable furnace repair in ${config.city}. Family-owned with a price match guarantee.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeHeat}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Heating Services</span>
@@ -20,7 +20,7 @@ export default function FurnaceRepair() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeHeat}`}>
         <div className={`container ${styles.grid}`}>
           
           {/* Left Column: Text & Selling Points */}
@@ -33,7 +33,7 @@ export default function FurnaceRepair() {
               Our expert technicians are trained to diagnose and repair all major makes and models. We carry fully stocked trucks to ensure that most heating repairs can be completed on the very first visit. 
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Signs You Need Furnace Repair:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-red)" }}>Signs You Need Furnace Repair:</h3>
             <ul className={styles.benefitsList}>
               <li>• Unusual noises (banging, squealing, or rattling)</li>
               <li>• Blowing cold air instead of warm air</li>

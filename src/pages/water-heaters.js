@@ -12,7 +12,7 @@ export default function WaterHeatersOverview() {
         <meta name="description" content={`Water heater repair, tank replacement, and tankless upgrades in ${config.city}. Expert service by ${config.siteName}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeWater}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Category Overview</span>
@@ -21,7 +21,7 @@ export default function WaterHeatersOverview() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeWater}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -30,7 +30,7 @@ export default function WaterHeatersOverview() {
               Your water heater works 24/7/365 to keep your home comfortable. When it fails, you need a team that acts fast. {config.siteName} specializes in traditional tank water heaters and modern tankless systems.
             </p>
             
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Explore Our Hot Water Services:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-blue-dk)" }}>Explore Our Hot Water Services:</h3>
             <ul className={styles.benefitsList}>
               <li>• <Link href="/water-heater-repair" style={{color: "var(--brand-navy)", fontWeight: "bold"}}>Water Heater Repair</Link> - Fixing leaks, pilot lights, and heating elements.</li>
               <li>• <Link href="/water-heater-replacement" style={{color: "var(--brand-navy)", fontWeight: "bold"}}>Water Heater Replacement</Link> - Upgrading old, rusted tanks before they flood.</li>

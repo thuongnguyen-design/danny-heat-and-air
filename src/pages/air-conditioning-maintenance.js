@@ -11,7 +11,7 @@ export default function ACMaintenance() {
         <meta name="description" content={`Get your AC ready for summer! Prevent breakdowns and maximize efficiency with a professional AC tune-up from ${config.siteName}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeCool}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Cooling Services</span>
@@ -20,7 +20,7 @@ export default function ACMaintenance() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeCool}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,7 +32,7 @@ export default function ACMaintenance() {
               A professional AC tune-up from {config.siteName} restores your system to peak efficiency. A clean, well-lubricated, and fully charged air conditioner doesn't have to work as hard, which saves you money every single month.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>What Our AC Tune-Up Includes:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-blue-dk)" }}>What Our AC Tune-Up Includes:</h3>
             <ul className={styles.benefitsList}>
               <li>• Checking and optimizing refrigerant (Freon) levels</li>
               <li>• Cleaning the outdoor condenser coils to improve airflow</li>

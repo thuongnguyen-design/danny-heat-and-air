@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import config from "@/lib/config";
 import styles from "./Footer.module.css";
 
@@ -10,12 +11,7 @@ export default function Footer() {
       <div className={styles.topStrip}>
         <div className={`container ${styles.topInner}`}>
           <div className={styles.footerLogo}>
-            <svg viewBox="0 0 40 40" width="32" height="32" fill="none">
-              <circle cx="20" cy="20" r="18" stroke="#3B9FD9" strokeWidth="2.5" fill="none" strokeDasharray="6 3"/>
-              <path d="M20 5C27 12 32 15 32 20C32 27 27 32 20 32C13 32 8 27 8 20C8 15 13 12 20 5Z" fill="#3B9FD9" opacity="0.8"/>
-              <path d="M20 11C24 15 27 18 27 20C27 24 24 27 20 27C16 27 13 24 13 20C13 18 16 15 20 11Z" fill="#3B9FD9"/>
-              <circle cx="20" cy="20" r="4" fill="white"/>
-            </svg>
+            <Image src="/logo-v2.png" alt="DANNY Heat & Air" width={72} height={54} style={{ height: 'auto', width: 'auto', maxHeight: 54 }} />
             <span className={styles.logoText}><span style={{ color: 'var(--brand-blue)' }}>DANNY</span> Heat &amp; Air</span>
           </div>
           <div className={styles.footerPhone}>
@@ -41,10 +37,8 @@ export default function Footer() {
         <div className={styles.col}>
           <h4>Working Hours</h4>
           <ul className={styles.hours}>
-            <li><span>Thu - Fri</span><span>9AM - 6PM</span></li>
-            <li><span>Mon - Wed</span><span>9AM - 5PM</span></li>
-            <li><span>Saturday</span><span>10AM - 3PM</span></li>
-            <li><span>Sunday</span><span>Closed</span></li>
+            <li><span>Mon - Sun</span><span>9AM - 10PM</span></li>
+            <li><span>Same hours every day</span><span></span></li>
           </ul>
         </div>
 
@@ -54,7 +48,6 @@ export default function Footer() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about-us">About Us</Link></li>
             <li><Link href="/air-conditioning">Services</Link></li>
-            <li><Link href="/financing">Financing</Link></li>
             <li><Link href="/contact-us">Contact</Link></li>
           </ul>
         </div>

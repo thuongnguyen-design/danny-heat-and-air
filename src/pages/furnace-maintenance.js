@@ -11,7 +11,7 @@ export default function FurnaceMaintenance() {
         <meta name="description" content={`Prevent winter breakdowns and lower your energy bills with a professional furnace tune-up from ${config.siteName}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeHeat}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Heating Services</span>
@@ -20,7 +20,7 @@ export default function FurnaceMaintenance() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeHeat}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,7 +32,7 @@ export default function FurnaceMaintenance() {
               At {config.siteName}, our comprehensive heating tune-up ensures your system is safe, clean, and operating at peak efficiency. We catch small issues like worn sensors or dirty burners before they turn into expensive emergency repairs.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>What Our Tune-Up Includes:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-red)" }}>What Our Tune-Up Includes:</h3>
             <ul className={styles.benefitsList}>
               <li>• Carbon monoxide and gas leak safety checks</li>
               <li>• Cleaning and adjusting burner assemblies</li>
@@ -41,9 +41,9 @@ export default function FurnaceMaintenance() {
               <li>• Replacing or cleaning standard air filters</li>
             </ul>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-navy)" }}>Join the Family Plan</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-navy)" }}>Schedule Your Tune-Up Today</h3>
             <p>
-              Want to put your home's comfort on autopilot? Ask your technician about our Annual Maintenance Memberships. Members get priority scheduling, discounted repairs, and an annual tune-up included!
+              A quick fall tune-up keeps your furnace running safely and efficiently all winter. Call us or request a service online — we'll get you on the schedule.
             </p>
           </div>
 

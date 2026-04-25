@@ -11,7 +11,7 @@ export default function Ductwork() {
         <meta name="description" content={`Improve airflow, eliminate hot spots, and lower energy bills with professional ductwork services in ${config.city}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeAir}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Heating Services</span>
@@ -20,7 +20,7 @@ export default function Ductwork() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeAir}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,7 +32,7 @@ export default function Ductwork() {
               At {config.siteName}, we look at the whole picture. We provide comprehensive duct testing, sealing, repair, and complete ductwork replacement to ensure the air you pay to heat and cool actually reaches your living spaces.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Signs You Have Bad Ductwork:</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-navy)" }}>Signs You Have Bad Ductwork:</h3>
             <ul className={styles.benefitsList}>
               <li>• Hot and cold spots in different rooms</li>
               <li>• Unusually dusty home despite regular cleaning</li>

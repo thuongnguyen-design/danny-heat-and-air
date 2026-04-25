@@ -20,7 +20,7 @@ export default function AboutUs() {
       </section>
 
       <section className={styles.storySection}>
-        <div className={`container ${styles.storyGrid} reveal`}>
+        <div className={`container reveal`}>
           <div className={styles.storyText}>
             <h2>Your Local {config.city} HVAC Family</h2>
             <p>
@@ -32,13 +32,6 @@ export default function AboutUs() {
             <p>
               <strong>We are proud to offer a true Price Match Guarantee.</strong> If you find a better price from another licensed local company, we won't just match it—we'll deliver superior service to prove why we should be your HVAC company for life.
             </p>
-          </div>
-
-          <div className={styles.storyImagePlaceholder}>
-            <div>
-              <span style={{ fontSize: "3rem", display: "block", marginBottom: "10px" }}>📸</span>
-              [Insert a photo of your team or work truck here later!]
-            </div>
           </div>
         </div>
       </section>

@@ -11,7 +11,7 @@ export default function MiniSplits() {
         <meta name="description" content={`Experience ultra-efficient, whisper-quiet zone cooling with a ductless mini split system from ${config.siteName}.`} />
       </Head>
 
-      <section className={styles.hero}>
+      <section className={`${styles.hero} ${styles.themeCool}`}>
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContent}`}>
           <span className={styles.heroLabel}>Cooling Services</span>
@@ -20,7 +20,7 @@ export default function MiniSplits() {
         </div>
       </section>
 
-      <section className={styles.mainLayout}>
+      <section className={`${styles.mainLayout} ${styles.themeCool}`}>
         <div className={`container ${styles.grid}`}>
           
           <div className={styles.contentWrapper}>
@@ -32,7 +32,7 @@ export default function MiniSplits() {
               Unlike traditional central AC, mini splits operate on a "zone" system. This means you can cool the living room during the day without wasting energy cooling the bedrooms, putting you in total control of your comfort and utility bills.
             </p>
 
-            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-orange)" }}>Why Choose a Mini Split?</h3>
+            <h3 style={{ marginTop: "40px", marginBottom: "15px", color: "var(--brand-blue-dk)" }}>Why Choose a Mini Split?</h3>
             <ul className={styles.benefitsList}>
               <li>• Quick and minimally invasive installation (no major construction)</li>
               <li>• Whisper-quiet operation indoors and outdoors</li>

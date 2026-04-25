@@ -19,7 +19,7 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(43,127,181,0.80) 0%, rgba(26,39,68,0.95) 50%, rgba(198,40,40,0.65) 100%);
+  background: linear-gradient(135deg, rgba(13,165,189,0.75) 0%, rgba(26,39,68,0.95) 50%, rgba(165,42,45,0.60) 100%);
 }
 .heroContent {
   position: relative;
@@ -109,7 +109,6 @@
 .serviceCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-  border-left-color: var(--brand-blue);
 }
 
 .svcIcon {
@@ -117,17 +116,43 @@
   height: 48px;
   min-width: 48px;
   border-radius: 10px;
-  background: var(--brand-blue-lt);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: var(--brand-blue);
   transition: all 0.3s ease;
 }
-.serviceCard:hover .svcIcon {
+
+/* ── Heating variant (red) ─────────────────────────────── */
+.serviceCardHeat .svcIcon {
+  background: var(--brand-red-lt);
+  color: var(--brand-red);
+}
+.serviceCardHeat:hover {
+  border-left-color: var(--brand-red);
+}
+.serviceCardHeat:hover .svcIcon {
+  background: var(--brand-red);
+  color: #fff;
+}
+.serviceCardHeat .svcLink {
+  color: var(--brand-red);
+}
+
+/* ── Cooling variant (teal/blue — "tile") ──────────────── */
+.serviceCardCool .svcIcon {
+  background: var(--brand-blue-lt);
+  color: var(--brand-blue);
+}
+.serviceCardCool:hover {
+  border-left-color: var(--brand-blue);
+}
+.serviceCardCool:hover .svcIcon {
   background: var(--brand-blue);
   color: #fff;
+}
+.serviceCardCool .svcLink {
+  color: var(--brand-blue-dk);
 }
 
 .svcBody {
@@ -156,7 +181,6 @@
   font-family: var(--font-display);
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--brand-blue-dk);
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -221,6 +245,17 @@
   font-size: 22px;
   color: #fff;
 }
+
+/* Per-category accent colors */
+.catCard_heating .catIcon { background: var(--brand-red); }
+.catCard_heating:hover { border-color: rgba(165,42,45,0.20); }
+.catCard_heating .catLink i { color: var(--brand-red); }
+.catCard_heating .catLink:hover { color: var(--brand-red); }
+
+.catCard_cooling .catIcon { background: var(--brand-blue); }
+.catCard_water .catIcon { background: var(--brand-blue); }
+.catCard_air-quality .catIcon { background: var(--brand-navy); }
+.catCard_air-quality .catLink:hover { color: var(--brand-navy); }
 
 .catTitle {
   font-family: var(--font-display);

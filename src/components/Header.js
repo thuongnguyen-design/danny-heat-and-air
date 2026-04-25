@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import config from "@/lib/config";
 import styles from "./Header.module.css";
 
@@ -41,21 +42,18 @@ const navItems = [
       },
       {
         label: "Annual Maintenance",
-        href: "/memberships",
+        href: "/air-conditioning-maintenance",
         items: [
-          { label: "The Family Plan", href: "/memberships" },
           { label: "AC Spring Tune-Up", href: "/air-conditioning-maintenance" },
           { label: "Furnace Fall Tune-Up", href: "/furnace-maintenance" },
         ],
       },
     ],
   },
-  { label: "Financing", href: "/financing" },
   {
     label: "About",
     href: "#",
     children: [
-      { label: "Family Plan", href: "/memberships" },
       { label: "Mission Statement", href: "/about-us" },
       { label: "Our Guarantee", href: "/guarantee" },
     ],
@@ -82,26 +80,31 @@ export default function Header() {
           <span className={styles.topBarText}>
             <i className="fa-solid fa-location-dot" style={{ color: 'var(--brand-blue)' }}></i> Serving Stockton &amp; Surrounding Areas — Licensed, Bonded &amp; Insured
           </span>
-          <a href={`tel:${config.phoneMain.replace(/\D/g, "")}`} className={styles.topBarCall}>
-            <i className="fa-solid fa-phone"></i>
-            Get Help Now
+          <a href={`tel:${config.phoneMain.replace(/\D/g, "")}`} className={styles.topBarPhone}>
+            <i className="fa-solid fa-phone"></i> {config.phoneMain}
           </a>
         </div>
       </div>
 
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
         <div className={`container ${styles.inner}`}>
-          <Link href="/" className={styles.logo}>
-            <span className={styles.logoIcon}>
-              <svg viewBox="0 0 40 40" width="36" height="36" fill="none">
-                <circle cx="20" cy="20" r="18" stroke="#3B9FD9" strokeWidth="2.5" fill="none" strokeDasharray="6 3"/>
-                <path d="M20 5C27 12 32 15 32 20C32 27 27 32 20 32C13 32 8 27 8 20C8 15 13 12 20 5Z" fill="#3B9FD9" opacity="0.8"/>
-                <path d="M20 11C24 15 27 18 27 20C27 24 24 27 20 27C16 27 13 24 13 20C13 18 16 15 20 11Z" fill="#3B9FD9"/>
-                <circle cx="20" cy="20" r="4" fill="white"/>
-              </svg>
-            </span>
-            <span className={styles.logoText}>
-              <span style={{ color: 'var(--brand-blue)' }}>DANNY</span> Heat &amp; Air
+          <Link href="/" className={styles.logo} aria-label="DANNY Heat & Air — Home">
+            <Image
+              src="/logo-icon.png"
+              alt=""
+              width={160}
+              height={120}
+              quality={95}
+              className={styles.logoIcon}
+              priority
+            />
+            <span className={styles.wordmark}>
+              <span className={styles.wordmarkBrand}>DANNY</span>
+              <span className={styles.wordmarkSub}>Heat &amp; Air</span>
+              <span className={styles.wordmarkLic}>
+                <i className="fa-solid fa-shield-halved"></i>
+                <span>CA Lic. #1144064</span>
+              </span>
             </span>
           </Link>
 
@@ -160,7 +163,7 @@ export default function Header() {
           </nav>
 
           <div className={styles.ctas}>
-            <Link href="/contact-us" className="btn btn-primary">Book Service Now</Link>
+            <Link href="/contact-us" className="btn btn-secondary">Request a Service</Link>
           </div>
 
           <a

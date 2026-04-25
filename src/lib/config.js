@@ -82,33 +82,9 @@ const config = {
   promotions: [
     { title: "$50 OFF",      subtitle: "Any repair over $300",     expires: "Dec 31, 2026" },
     { title: "FREE Tune-Up",  subtitle: "With new system install",  expires: "Ongoing" },
-    { title: "0% Financing",  subtitle: "For 18 months — OAC",      expires: "Ongoing" },
     { title: "$25 OFF",       subtitle: "First-time customers",     expires: "Ongoing" },
   ],
 
-  membershipPlans: [
-    {
-      name: "Basic",
-      price: "$15/mo",
-      perks: [
-        "Annual AC tune-up",
-        "Annual furnace inspection",
-        "Priority scheduling",
-        "10% off repairs",
-      ],
-    },
-    {
-      name: "Premium",
-      price: "$29/mo",
-      perks: [
-        "Semi-annual tune-ups",
-        "Priority same-day service",
-        "15% off all repairs",
-        "Free duct inspection",
-      ],
-      highlight: true,
-    },
-  ],
 };
 
 export default config;

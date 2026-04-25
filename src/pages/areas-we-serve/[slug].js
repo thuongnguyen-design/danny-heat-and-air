@@ -39,7 +39,7 @@ const AREA_INFO = {
     county: "Stanislaus County",
     intro: "We've extended our service area to include Modesto because great HVAC service shouldn't stop at county lines. Modesto residents get the same priority scheduling and fair pricing we're known for.",
     why: "Modesto's climate mirrors much of the Central Valley — hot, dry summers and cold, foggy winters. Your comfort depends on a reliable HVAC system, and our experienced technicians are up to the task.",
-    services: "Modesto homeowners can count on us for furnace repair, AC installation and maintenance, indoor air quality solutions, tankless water heater upgrades, and our popular Family Plan maintenance membership.",
+    services: "Modesto homeowners can count on us for furnace repair, AC installation and maintenance, indoor air quality solutions, and tankless water heater upgrades.",
   },
   galt: {
     name: "Galt",
@@ -69,7 +69,7 @@ export default function AreaPage() {
           <div className={`container ${styles.heroContent}`}>
             <h1 className={styles.heroH1}>Area Not Found</h1>
             <p className={styles.heroSub}>
-              We couldn't find that location. <Link href="/areas-we-serve" style={{ color: 'var(--brand-orange)' }}>View all areas we serve</Link>.
+              We couldn't find that location. <Link href="/areas-we-serve" style={{ color: 'var(--brand-red)' }}>View all areas we serve</Link>.
             </p>
           </div>
         </section>
