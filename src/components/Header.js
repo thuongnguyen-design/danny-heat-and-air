@@ -45,6 +45,9 @@ const navItems = [
         href: "/commercial-refrigeration-repair",
         items: [
           { label: "Refrigeration Repair", href: "/commercial-refrigeration-repair" },
+          { label: "Commercial AC Repair", href: "/commercial-ac-repair" },
+          { label: "Commercial HVAC Installation", href: "/commercial-hvac-installation" },
+          { label: "Commercial Maintenance", href: "/commercial-maintenance" },
         ],
       },
       {

@@ -46,6 +46,9 @@ const CATEGORIES = [
     slug: "commercial",
     links: [
       { label: "Commercial Refrigeration Repair", href: "/commercial-refrigeration-repair" },
+      { label: "Commercial AC Repair", href: "/commercial-ac-repair" },
+      { label: "Commercial HVAC Installation", href: "/commercial-hvac-installation" },
+      { label: "Commercial Maintenance", href: "/commercial-maintenance" },
     ],
   },
   {
