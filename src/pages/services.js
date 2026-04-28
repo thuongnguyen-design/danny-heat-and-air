@@ -40,6 +40,15 @@ const CATEGORIES = [
     ],
   },
   {
+    title: "Commercial Refrigeration",
+    desc: "Fast repair for walk-in coolers, freezers, ice machines, and more.",
+    faIcon: "fa-solid fa-temperature-low",
+    slug: "commercial",
+    links: [
+      { label: "Commercial Refrigeration Repair", href: "/commercial-refrigeration-repair" },
+    ],
+  },
+  {
     title: "Indoor Air Quality",
     desc: "Breathe cleaner, healthier air with professional duct cleaning and inspections.",
     faIcon: "fa-solid fa-wind",

@@ -56,6 +56,14 @@ const config = {
       tagline: "Keep your AC running at peak performance all season.",
       description: "Our seasonal maintenance tune-ups extend equipment life, improve efficiency, and preserve your warranty.",
     },
+    {
+      slug: "commercial-refrigeration-repair",
+      title: "Commercial Refrigeration Repair",
+      category: "cooling",
+      faIcon: "fa-solid fa-temperature-low",
+      tagline: "Keep your business running with fast commercial refrigeration repair.",
+      description: "Walk-in coolers, reach-in freezers, ice machines — we diagnose and repair all commercial refrigeration equipment to minimize downtime and protect your inventory.",
+    },
   ],
 
   serviceAreas: [

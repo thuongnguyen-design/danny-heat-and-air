@@ -41,6 +41,13 @@ const navItems = [
         ],
       },
       {
+        label: "Commercial",
+        href: "/commercial-refrigeration-repair",
+        items: [
+          { label: "Refrigeration Repair", href: "/commercial-refrigeration-repair" },
+        ],
+      },
+      {
         label: "Annual Maintenance",
         href: "/air-conditioning-maintenance",
         items: [

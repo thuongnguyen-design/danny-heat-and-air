@@ -38,6 +38,7 @@ export default function Footer() {
             <li><Link href="/air-conditioning-repair">AC Repair</Link></li>
             <li><Link href="/air-conditioner-installation">AC Installation</Link></li>
             <li><Link href="/duct-cleaning">Duct Cleaning</Link></li>
+            <li><Link href="/commercial-refrigeration-repair">Commercial Refrigeration</Link></li>
           </ul>
         </div>
 
