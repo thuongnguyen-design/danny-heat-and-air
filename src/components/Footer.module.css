@@ -28,6 +28,11 @@
   font-weight: 800;
   color: #fff;
 }
+.footerPhones {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 .footerPhone {
   display: flex;
   align-items: center;
@@ -36,6 +41,10 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1rem;
+}
+.footerPhoneDivider {
+  color: rgba(255,255,255,0.3);
+  font-weight: 400;
 }
 
 /* ── Main Grid ── */
