@@ -80,9 +80,15 @@ export default function Header() {
           <span className={styles.topBarText}>
             <i className="fa-solid fa-location-dot" style={{ color: 'var(--brand-blue)' }}></i> Serving Stockton &amp; Surrounding Areas — Licensed, Bonded &amp; Insured
           </span>
-          <a href={`tel:${config.phoneMain.replace(/\D/g, "")}`} className={styles.topBarPhone}>
-            <i className="fa-solid fa-phone"></i> {config.phoneMain}
-          </a>
+          <span className={styles.topBarPhones}>
+            <a href={`tel:${config.phoneMain.replace(/\D/g, "")}`} className={styles.topBarPhone}>
+              <i className="fa-solid fa-phone"></i> {config.phoneMain}
+            </a>
+            <span className={styles.phoneDivider}>|</span>
+            <a href={`tel:${config.phoneAlt.replace(/\D/g, "")}`} className={styles.topBarPhone}>
+              <i className="fa-solid fa-phone"></i> {config.phoneAlt}
+            </a>
+          </span>
         </div>
       </div>
 

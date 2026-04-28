@@ -22,6 +22,11 @@
     font-size: 0.78rem;
   }
 }
+.topBarPhones {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
 .topBarPhone {
   display: inline-flex;
   align-items: center;
@@ -38,6 +43,10 @@
 }
 .topBarPhone i {
   color: var(--brand-blue);
+}
+.phoneDivider {
+  color: rgba(255,255,255,0.3);
+  font-weight: 400;
 }
 
 /* ── Main Header — White Background ── */
