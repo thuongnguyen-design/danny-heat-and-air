@@ -88,7 +88,7 @@ export default function Header() {
 
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
         <div className={`container ${styles.inner}`}>
-          <Link href="/" className={styles.logo} aria-label="DANNY Heat & Air — Home">
+          <Link href="/" className={styles.logo} aria-label="DANNY Heat & Air LLC — Home">
             <Image
               src="/logo-icon.png"
               alt=""
@@ -100,7 +100,7 @@ export default function Header() {
             />
             <span className={styles.wordmark}>
               <span className={styles.wordmarkBrand}>DANNY</span>
-              <span className={styles.wordmarkSub}>Heat &amp; Air</span>
+              <span className={styles.wordmarkSub}>Heat &amp; Air LLC</span>
               <span className={styles.wordmarkLic}>
                 <i className="fa-solid fa-shield-halved"></i>
                 <span>CA Lic. #1144064</span>

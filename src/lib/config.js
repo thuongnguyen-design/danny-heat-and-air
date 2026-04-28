@@ -1,7 +1,7 @@
 const config = {
-  siteName:  process.env.NEXT_PUBLIC_SITE_NAME  || "DANNY Heat & Air",
-  phoneMain: process.env.NEXT_PUBLIC_PHONE_MAIN || "(209) 598-5990",
-  phoneAlt:  process.env.NEXT_PUBLIC_PHONE_ALT  || "(209) 992-9889",
+  siteName:  process.env.NEXT_PUBLIC_SITE_NAME  || "DANNY Heat & Air LLC",
+  phoneMain: process.env.NEXT_PUBLIC_PHONE_MAIN || "(209) 992-9889",
+  phoneAlt:  process.env.NEXT_PUBLIC_PHONE_ALT  || "(209) 598-5990",
   email:     process.env.NEXT_PUBLIC_EMAIL      || "dvmheatingncooling@gmail.com",
   city:      process.env.NEXT_PUBLIC_CITY       || "Stockton",
   state:     process.env.NEXT_PUBLIC_STATE      || "CA",
