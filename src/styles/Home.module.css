@@ -161,9 +161,9 @@
 /* ── Services grid — 2-column color-coded ───────────────── */
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .serviceCard {
@@ -539,6 +539,9 @@
   .heroForm     { max-width: 500px; }
   .plansGrid { grid-template-columns: 1fr; }
   .testimonialsWrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 1100px) {
+  .servicesGrid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 900px) {
   .servicesGrid { grid-template-columns: repeat(2, 1fr); }
